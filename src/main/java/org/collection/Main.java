@@ -4,7 +4,6 @@ import org.collection.lists.DoublyLinkedList;
 import org.collection.lists.ListArray;
 import org.collection.lists.RingBuffer;
 
-import java.util.ArrayList;
 import java.util.stream.Stream;
 
 public class Main {
@@ -32,6 +31,13 @@ public class Main {
     array.sort();
     System.out.println(array);
 
-    return;
+    ListArray<Float> floatArray = new ListArray<>();
+    Stream.iterate(10F, n -> n - 0.5F)
+        .limit(10)
+        .forEach(floatArray::add);
+
+    System.out.println(floatArray);
+    floatArray.sort();
+    System.out.println(floatArray);
   }
 }

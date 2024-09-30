@@ -106,6 +106,7 @@ public class ListArray<A> implements Comparable <ListArray<A>> {
     StringBuilder result = new StringBuilder();
     result.append("[ ");
     for (Object item : this.array) {
+      if (item == null) break;
       result.append(item).append(" ");
     }
     result.append(" ]");
